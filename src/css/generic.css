@@ -1,0 +1,170 @@
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+    width: 100%;
+}
+.gutter-example .ant-row > div {
+    background: transparent;
+    border: 0;
+}
+.gutter-box {
+    background: #00A0E9;
+    padding: 5px 0;
+}
+
+.events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.events .ant-badge-status {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
+  
+/* ui css goes here */
+input.ant-input.ant-input-sm.inputBox{
+	 padding: 15px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button.ant-btn.login-form-button.registerButton.ant-btn-primary{
+    width: 100%;
+    background-color: #1890ff;
+    color: white;
+    padding: 0px 20px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button.ant-btn.login-form-button.registerButton.ant-btn-primary:hover{
+    background-color: #45a049;
+	border:#45a049;
+}
+button.ant-btn.login-form-button.loginButton.ant-btn-primary:hover{
+	background-color: #45a049;
+	border:#45a049;
+}
+button.ant-btn.login-form-button.loginButton.ant-btn-primary {
+    margin-bottom: 19%;
+}
+.loginFormTabs .ant-tabs-tabpane.ant-tabs-tabpane-active{
+	align-items:center;
+}
+.loginFormTabs .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-wrap{
+	text-align:center;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+}
+.loginFormTabs {
+    width: 755px;
+    margin: 0 auto;
+    margin-bottom: 17%;
+}
+.popupWindow .ant-modal-body {
+    overflow-y: scroll;
+    height: 500px;
+}
+.folderTab .ant-collapse-content {
+    overflow-y: scroll;
+    max-height: 230px;
+}
+.col-3 {
+    border: 1px solid #e8e8e8;
+}
+.col-3 .ant-card-bordered {
+    border: none;
+}
+.folderTab button:hover{
+	background-color: #45a049;
+	border:#45a049;
+}
+.sliderCover .ant-carousel .slick-track{
+	height:350px;
+}
+.ant-collapse.folderTab {
+    margin-bottom: 30%;
+}
+.sliderCover h3{
+	font-size:45px;
+	font-weight:bold;
+}
+body{
+overflow:hidden;}
+
+.ant-col-6.col-3 {
+    height: 230px;
+    float: left;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+	margin:28px;
+}
+.ant-col-10.col-sm-10 {
+    margin: 0 0 80% 0;
+}
+.col-sm-10 .ant-card.ant-card-bordered {
+    margin-top: 23px;
+    padding: 12px;
+}
+.ant-col-6.col-sm-6 {
+    margin: 23px 6px 0 5px;
+}
+.col-sm-6 .ant-card h4 {
+    font-size: 17px;
+}
+.ant-modal.popupWindow {
+    width: 1200px !important;
+    max-width: 100%;
+}
+.col-sm-6 .anticon-folder{
+	margin-top:4%;
+}
+input.ant-input.ant-input-sm.emailId{
+	 padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.userDetails span {
+    font-size: 16px;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
