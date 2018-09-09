@@ -24,6 +24,7 @@ Update CONTRACT_DEPLOYED_PORT in env, which can be found in build -> contracts -
 
 **2. Start react server**  
 &nbsp;&nbsp;&nbsp;`npm run start`  
+&nbsp;&nbsp;&nbsp; visit http://localhost:3000  
 
 **3. Start node app**   
 &nbsp;&nbsp;&nbsp;`npm run server`  
@@ -37,9 +38,15 @@ ___High Level Use Case___
 
 ___Sign In___  
 
+&nbsp;&nbsp;&nbsp; User should sign challenge to login, after which jwt token will be issued  
+
 ![Alt text](readme_images/2nd.png?raw=true "sign_in")  
 
 ___Upload Files___  
+
+&nbsp;&nbsp;&nbsp; Here we have two layer of security 
+1. hash provided by ipfs(ie. files can be accessed only if file hash is known)
+2. file uploaded to ipfs is encrypted by secret (however secret is not encrypted in ethereum, should be done in future)
 
 ![Alt text](readme_images/3rd.png?raw=true "upload_files")  
 
@@ -47,3 +54,6 @@ ___Access Files___
 
 ![Alt text](readme_images/4th.png?raw=true "access_files")  
 
+###TODO  
+- Test cases, Currently deployment and registation tests has been written.
+- Encrypt file secret while saving on ethereum (can be encrypted or NuCypher etc)
