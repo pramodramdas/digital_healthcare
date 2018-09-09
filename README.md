@@ -31,3 +31,19 @@ Update CONTRACT_DEPLOYED_PORT in env, which can be found in build -> contracts -
 **4. Connect metamask to ganache and Import ganache accounts to metamask**  
 &nbsp;&nbsp;&nbsp;ex: http://localhost:7545  
 
+___High Level Use Case___  
+
+![Alt text](readme_images/high_level.png?raw=true "high_level")  
+
+___Sign In___  
+
+![Alt text](readme_images/2nd.png?raw=true "sign_in")  
+
+___Upload Files___  
+
+![Alt text](readme_images/3rd.png?raw=true "upload_files")  
+
+___Access Files___  
+
+![Alt text](readme_images/4th.png?raw=true "access_files")  
+
