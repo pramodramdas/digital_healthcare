@@ -121,39 +121,39 @@ describe('Check Registration', () => {
 
 // // Not able to proceed with test suit as sign function behaves differently.
 // // signature extraction leads to different address.
-// describe('Check Signin', () => {
-//     beforeAll((done) => {
-//         process.env.CONTRACT_ADDRESS = contractRef.contractAddress;
-//         app = require('../server');
-//         init_web3();
-//         setTimeout(()=> {
-//             done();
-//         },5000)
-//     });
+describe('Check Signin', () => {
+    beforeAll((done) => {
+        process.env.CONTRACT_ADDRESS = contractRef.contractAddress;
+        app = require('../server');
+        init_web3();
+        setTimeout(()=> {
+            done();
+        },5000)
+    });
 
-//     test('Doctor signin', async (done) => {
-//         web3.eth.defaultAccount = contractRef.accounts[1];
+    test('Doctor signin', async (done) => {
+        web3.eth.defaultAccount = contractRef.accounts[1];
+        console.log(process.env.SERVER_ADDRESS+'/custom_auth/' + contractRef.accounts[1]);
+        let resp = await axios.get(process.env.SERVER_ADDRESS+'/custom_auth/' + contractRef.accounts[1]);
 
-//         let resp = await axios.get(process.env.SERVER_ADDRESS+'/custom_auth/' + contractRef.accounts[1]);
+        if(resp && resp.data){
+            let signature = web3.eth.sign(contractRef.accounts[1], web3.sha3(resp.data.challenge), async (err, signature) => {
+                if(err)
+                    done.fail(err);
 
-//         if(resp && resp.data){
-//             let signature = web3.eth.sign(contractRef.accounts[1], web3.sha3(resp.data.challenge), async (err, signature) => {
-//                 if(err)
-//                     done.fail(err);
+                let auth_resp = await axios.get(process.env.SERVER_ADDRESS+'/verify_auth/' + signature +"/?client_address="+web3.eth.defaultAccount);
+                if (auth_resp.data && auth_resp.data.success) {
+                    setAuthToken(auth_resp.data.user.token);
+                    done()
+                } else 
+                    done.fail("login failed");
+            });
+        }
+        else 
+            done.fail("Erron in response");
+    });
 
-//                 let auth_resp = await axios.get(process.env.SERVER_ADDRESS+'/verify_auth/' + signature +"/?client_address="+web3.eth.defaultAccount);
-//                 if (auth_resp.data && auth_resp.data.success) {
-//                     setAuthToken(auth_resp.data.user.token);
-//                     done()
-//                 } else 
-//                     done.fail("login failed");
-//             });
-//         }
-//         else 
-//             done.fail("Erron in response");
-//     });
-
-//     afterAll(function () {
-//         app.close();
-//     });
-//  });
+    afterAll(function () {
+        app.close();
+    });
+ });
