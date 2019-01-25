@@ -1,6 +1,9 @@
 # digital_healthcare
 electronic health records on blockchain
 
+#### demo: http://digital-healthcare.herokuapp.com/
+##### Note: Demo url to work you need to have metamask extension installed in your browser and to buy fake tickets you need to have fake ethers from rinkeby faceut.
+
 ### Summary
 Project stores patient records on blockchain(hybrid). Hybrid because files are not stored on blockchain, but access information is stored on blockchain. There will be two participants doctor and patient.  
 - Doctor register by providing name.  
